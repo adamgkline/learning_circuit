@@ -20,7 +20,7 @@ setup(
     author='Marcelo Guzman',
     author_email='mguzmanj@sas.upenn.edu',
     description='Learning using linear circuits',
-    url='https://github.com/maguzj/learning_circuit'
+    url='https://github.com/adamgkline/learning_circuit'
 )
 
 
