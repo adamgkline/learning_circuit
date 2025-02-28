@@ -16,7 +16,7 @@ setup(
         "poisson_disc==0.2.1",
         "vapory==0.1.2",
         "jupyter==1.0.0",
-    ]
+    ],
     author='Marcelo Guzman',
     author_email='mguzmanj@sas.upenn.edu',
     description='Learning using linear circuits',
