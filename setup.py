@@ -17,7 +17,6 @@ setup(
         "vapory==0.1.2",
         "jupyter==1.0.0",
         "pandas==2.2.3",
-        "sklearn==1.6.1",
     ],
     author='Marcelo Guzman',
     author_email='mguzmanj@sas.upenn.edu',
