@@ -1,16 +1,18 @@
 import numpy as np
-from circuit_utils import Circuit
-from network_utils import *
 from tqdm import tqdm
 import matplotlib.pyplot as plt
 import pickle
 from scipy.sparse import csr_matrix, csc_array
 import jax.numpy as jnp
 import jax
-from jax import jit, vmap
 import json
 import csv
 from scipy.sparse import hstack
+
+from .circuit_utils import Circuit
+from .network_utils import *
+
+from jax import jit, vmap
 
 class learning(Circuit):
     '''
@@ -300,7 +302,7 @@ class learning(Circuit):
         delta_conductances = learning.s_grad_mse(conductances, incidence_matrix, Q_inputs, Q_outputs, circuit_batch[0], circuit_batch[1])
         return delta_conductances
 
-    def train_GD(self, learning_rate, train_data, n_epochs, save_global = False, save_state = False, save_path = 'trained_circuit', save_every = 1):
+    def train_GD(self, learning_rate, train_data, n_epochs, save_global = False, save_state = False, save_path = 'trained_circuit', save_every = 1, verbose=True):
         ''' Train the circuit for n_epochs. Each epoch consists of one passage of all the train_data.
         Have n_save_points save points, where the state of the circuit is saved if save_state is True.
         '''

@@ -1,7 +1,8 @@
 import networkx as nx
 import numpy as np
 import json
-from packing_utils import *
+
+from .packing_utils import *
 
 def grid_network(m, n, periodic=False, size_uc = (1,1), relabel_nodes=True):
     graph = nx.grid_2d_graph(m, n, periodic=periodic)

@@ -1,6 +1,5 @@
 import numpy as np
 
-from plot_imports import *
 import matplotlib.pyplot as plt
 from matplotlib import collections as mc
 import matplotlib.animation as animation
@@ -12,6 +11,8 @@ from scipy.integrate import solve_ivp
 from tqdm import tqdm
 from numba import jit
 from vapory import *
+
+from .plot_imports import *
 
 class Packing:
 	'''Class to model a contact network of bidisperse spheres.

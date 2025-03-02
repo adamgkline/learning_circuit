@@ -1,8 +1,9 @@
-from learning import *
 import jax
 import json
 import csv
 from jax import jit
+
+from .learning import *
 
 class restricted_CL(learning):
     @staticmethod

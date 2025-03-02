@@ -17,8 +17,9 @@ from matplotlib.patches import FancyArrowPatch
 from matplotlib.collections import PatchCollection
 import matplotlib.patheffects as path_effects
 from jax import jit, vmap
-from voronoi_utils import get_voronoi_polygons
 import cmocean
+
+from .voronoi_utils import get_voronoi_polygons
 
 class Circuit(object):
     ''' Class to simulate a circuit with trainable conductances 
@@ -183,7 +184,7 @@ class Circuit(object):
         Returns
         -------
         f : np.array
-            Source vector f. f has size n + len(indices_nodes).
+            Source vector f. f has size n + n_voltage_input, with n_voltage_input = the number of False entries in current_bool. The first n entries contain current constraints, the last n_voltage_input contain the voltage inputs.
         '''
         n_voltage_input = len(current_bool) -(current_bool).sum()
         f = np.zeros(self.n + n_voltage_input)

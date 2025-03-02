@@ -1,2 +1,5 @@
 __pycache__/
 venv
+*.json
+*.csv
+*.DS_Store
